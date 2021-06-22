@@ -2,6 +2,7 @@
 var firebaseConfig = {
       apiKey: "AIzaSyAyIg04lZVXzCG4QpFiwit6ktxhaSSYcWY",
       authDomain: "kwitter-4ad5a.firebaseapp.com",
+      databaseURL: "https://kwitter-4ad5a-default-rtdb.firebaseio.com",
       projectId: "kwitter-4ad5a",
       storageBucket: "kwitter-4ad5a.appspot.com",
       messagingSenderId: "1036561242545",
@@ -40,4 +41,10 @@ function redirectToRoomName(name)
       console.log(name);
       localStorage.setItem("room_name", name);
       window.location = "kwitter_page.html";
+}
+
+function logout(){
+      localStorage.removeItem("user_name");
+      localStorage.removeItem("room_name");
+            window.location = "index.html";
 }
